@@ -2,12 +2,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #111111;
-    color: #ECEBDF;
+     /* Light gray background */
+     /* Dark gray text */
 }
 
 header {
-    background-color: #BAB986;
+    background-color: #2ced3d; /* Dark gray header */
+    color: #F7F7F7; /* Light gray text */
     padding: 1em;
     text-align: center;
 }
@@ -16,7 +17,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ECEBDF;
+    background-color: #3B3B3B; /* Dark gray navigation bar */
     padding: 0.5em;
 }
 
@@ -32,7 +33,7 @@ nav li {
 }
 
 nav a {
-    color: #302F2B;
+    color: #F7F7F7; /* Light gray text */
     text-decoration: none;
     padding: 0.5em 1em;
     border-radius: 5px;
@@ -40,11 +41,12 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #BAB986;
+    background-color: #2ced3d;
+    
 }
 
 .logo {
-    max-width: 100px;
+    max-width: 80px;
     height: auto;
 }
 
@@ -82,11 +84,11 @@ nav a:hover {
 
 .section-main {
     padding: 2em;
-    background-color: #BAB986;
+    background-color: #BAB986; /* Light green main section */
 }
 
 section h2 {
-    color: #111111;
+    color: #3B3B3B; /* Dark gray section heading */
 }
 
 section p {
@@ -94,8 +96,8 @@ section p {
 }
 
 .how-it-works {
-    background-color: #FCFA07;
-    color: #ECEBDF;
+    background-color: #FCFA07; /* Yellow how-it-works section */
+    color: #3B3B3B; /* Dark gray text */
     padding: 1em;
     text-align: center;
 }
@@ -110,7 +112,7 @@ form {
 }
 
 form label {
-    color: #111111;
+    color: #3B3B3B; /* Dark gray label text */
     margin-bottom: 0.5em;
 }
 
@@ -127,151 +129,195 @@ form textarea {
 
 form button {
     padding: 0.5em 1em;
-    background-color: #BAB986;
+    background-color: #3B3B3B; /* Dark gray button background */
     border: none;
-    color: #111111;
+    color: #F7F7F7; /* Light gray button text */
     border-radius: 5px;
     cursor: pointer;
 }
 
 form button:hover {
-    background-color: #FCFA07;
+    background-color: #FCFA07; /* Yellow on button hover */
 }
- /* Add styling for the "Why Choose Us" section */
- .why-choose-us {
-            background-color: #302F2B;
-            color: #ECEBDF;
-            padding: 2em;
-            text-align: center;
-        }
 
-        .choose-us-content {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-top: 2em;
-        }
+/* Styling for "Why Choose Us" section */
+.why-choose-us {
+    background-color: #3B3B3B; /* Dark gray background */
+    color: #F7F7F7; /* Light gray text */
+    padding: 2em;
+    text-align: center;
+}
 
-        .choose-us-item {
-            flex: 1;
-            margin: 1em;
-            padding: 1.5em;
-            background-color: #BAB986;
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s ease-in-out;
-        }
+.choose-us-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 2em;
+}
 
-        .choose-us-item:hover {
-            transform: scale(1.05);
-        }
+.choose-us-item {
+    flex: 1;
+    margin: 1em;
+    padding: 1.5em;
+    background-color: #BAB986; /* Light green item background */
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
 
-        .choose-us-item h3 {
-            color: #111111;
-        }
+.choose-us-item:hover {
+    transform: scale(1.05);
+}
 
-        .choose-us-item p {
-            color: #111111;
-        }
+.choose-us-item h3,
+.choose-us-item p {
+    color: #3B3B3B; /* Dark gray text */
+}
 
-        /* Additional media query for better responsiveness */
-        @media screen and (max-width: 768px) {
-            .choose-us-item {
-                flex: 0 0 100%;
-            }
-        }
+/* Styling for "Scrap Types" section */
+.scrap-types {
+    background-color: #F7F7F7; /* Light gray background */
+    color: #3B3B3B; /* Dark gray text */
+    padding: 2em;
+    text-align: center;
+}
 
+.scrap-types-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 2em;
+}
 
-        /* Add styling for the "Scrap Types" section */
-        .scrap-types {
-            background-color: #ECEBDF;
-            color: #111111;
-            padding: 2em;
-            text-align: center;
-        }
+.scrap-type {
+    flex: 1;
+    margin: 1em;
+    padding: 1.5em;
+    background-color: #3B3B3B; /* Dark gray item background */
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
 
-        .scrap-types-list {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-top: 2em;
-        }
+.scrap-type:hover {
+    transform: scale(1.05);
+}
 
-        .scrap-type {
-            flex: 1;
-            margin: 1em;
-            padding: 1.5em;
-            background-color: #302F2B;
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s ease-in-out;
-            cursor: pointer;
-        }
+.scrap-type h3,
+.scrap-type p {
+    color: #F7F7F7; /* Light gray text */
+}
 
-        .scrap-type:hover {
-            transform: scale(1.05);
-        }
+.scrap-details {
+    display: none;
+    background-color: #F7F7F7; /* Light gray background */
+    color: #3B3B3B; /* Dark gray text */
+    padding: 2em;
+    text-align: center;
+    margin-top: 2em;
+}
 
-        .scrap-type h3 {
-            color: #ECEBDF;
-        }
+.scrap-details h2 {
+    color: #3B3B3B; /* Dark gray heading */
+}
 
-        .scrap-type p {
-            color: #ECEBDF;
-        }
-
-        /* Additional media query for better responsiveness */
-        @media screen and (max-width: 768px) {
-            .scrap-type {
-                flex: 0 0 100%;
-            }
-        }
+.scrap-details p {
+    color: #3B3B3B; /* Dark gray text */
+    margin-bottom: 1em;
+}
 
 
-        .scrap-details {
-            display: none;
-            background-color: #ECEBDF;
-            color: #111111;
-            padding: 2em;
-            text-align: center;
-            margin-top: 2em;
-        }
 
-        .scrap-details h2 {
-            color: #302F2B;
-        }
+/* Styling for the footer */
+.footer-div{
+    background-color: #2ced3d;
+}
 
-        .scrap-details p {
-            color: #302F2B;
-            margin-bottom: 1em;
-        }
-        /* This is a footer design*/
-        .footer{
-            display: flex;
 
-            background-color: aqua;
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
-        }
-        .footerlogo img{
-            padding: 10px;
-           
-        }
-        .footerlogo p{
-            padding: 10px;
-        }
-        .footer-rightside{
-            display: inline;
-            margin-left: 200px;
-        }
-        .footer-rightside ul{
-            text-decoration: none;
-            list-style-type: none;
-            
-        }
-        .footer-rightside li{
-            color: #111111;
-            font-size:large;
-        }
-        .ssss{
-            display: flex;
-        }
+.footer-logo {
+    flex: 1;
+}
+
+.footer-logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+.footer-info {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-info p {
+    margin-bottom: 0.5em;
+}
+
+.footer-links {
+    flex: 1;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.5em;
+}
+
+.footer-services {
+    flex: 2;
+}
+
+.footer-services h2 {
+    color: #FCFA07;
+    margin-bottom: 1em;
+}
+
+.footer-services ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-services li {
+    margin-bottom: 0.5em;
+}
+
+/* Add WhatsApp live chat styling (this is a placeholder, you may need to replace it with actual code) */
+.whatsapp-chat {
+    flex: 1;
+    text-align: center;
+}
+
+.whatsapp-chat img {
+    max-width: 50px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Additional media query for better responsiveness */
+@media screen and (max-width: 768px) {
+    .footer-logo,
+    .footer-info,
+    .footer-links,
+    .footer-services,
+    .whatsapp-chat {
+        flex: 1 0 100%;
+        text-align: center;
+    }
+}
+
+
+
+/* Continue with the rest of your CSS styles using the provided color palette */
