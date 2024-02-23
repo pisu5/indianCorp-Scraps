@@ -1,0 +1,277 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111111;
+    color: #ECEBDF;
+}
+
+header {
+    background-color: #BAB986;
+    padding: 1em;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ECEBDF;
+    padding: 0.5em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0 1em;
+}
+
+nav a {
+    color: #302F2B;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #BAB986;
+}
+
+.logo {
+    max-width: 100px;
+    height: auto;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #302F2B;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav li {
+        text-align: center;
+        margin: 0;
+    }
+
+    .menu-icon {
+        color: #111111;
+        display: block;
+    }
+}
+
+.section-main {
+    padding: 2em;
+    background-color: #BAB986;
+}
+
+section h2 {
+    color: #111111;
+}
+
+section p {
+    margin-bottom: 1em;
+}
+
+.how-it-works {
+    background-color: #FCFA07;
+    color: #ECEBDF;
+    padding: 1em;
+    text-align: center;
+}
+
+.contact-form {
+    margin-top: 2em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    color: #111111;
+    margin-bottom: 0.5em;
+}
+
+form input,
+form textarea,
+form button {
+    margin-bottom: 1em;
+}
+
+form input,
+form textarea {
+    padding: 0.5em;
+}
+
+form button {
+    padding: 0.5em 1em;
+    background-color: #BAB986;
+    border: none;
+    color: #111111;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #FCFA07;
+}
+ /* Add styling for the "Why Choose Us" section */
+ .why-choose-us {
+            background-color: #302F2B;
+            color: #ECEBDF;
+            padding: 2em;
+            text-align: center;
+        }
+
+        .choose-us-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 2em;
+        }
+
+        .choose-us-item {
+            flex: 1;
+            margin: 1em;
+            padding: 1.5em;
+            background-color: #BAB986;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .choose-us-item:hover {
+            transform: scale(1.05);
+        }
+
+        .choose-us-item h3 {
+            color: #111111;
+        }
+
+        .choose-us-item p {
+            color: #111111;
+        }
+
+        /* Additional media query for better responsiveness */
+        @media screen and (max-width: 768px) {
+            .choose-us-item {
+                flex: 0 0 100%;
+            }
+        }
+
+
+        /* Add styling for the "Scrap Types" section */
+        .scrap-types {
+            background-color: #ECEBDF;
+            color: #111111;
+            padding: 2em;
+            text-align: center;
+        }
+
+        .scrap-types-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 2em;
+        }
+
+        .scrap-type {
+            flex: 1;
+            margin: 1em;
+            padding: 1.5em;
+            background-color: #302F2B;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .scrap-type:hover {
+            transform: scale(1.05);
+        }
+
+        .scrap-type h3 {
+            color: #ECEBDF;
+        }
+
+        .scrap-type p {
+            color: #ECEBDF;
+        }
+
+        /* Additional media query for better responsiveness */
+        @media screen and (max-width: 768px) {
+            .scrap-type {
+                flex: 0 0 100%;
+            }
+        }
+
+
+        .scrap-details {
+            display: none;
+            background-color: #ECEBDF;
+            color: #111111;
+            padding: 2em;
+            text-align: center;
+            margin-top: 2em;
+        }
+
+        .scrap-details h2 {
+            color: #302F2B;
+        }
+
+        .scrap-details p {
+            color: #302F2B;
+            margin-bottom: 1em;
+        }
+        /* This is a footer design*/
+        .footer{
+            display: flex;
+
+            background-color: aqua;
+
+        }
+        .footerlogo img{
+            padding: 10px;
+           
+        }
+        .footerlogo p{
+            padding: 10px;
+        }
+        .footer-rightside{
+            display: inline;
+            margin-left: 200px;
+        }
+        .footer-rightside ul{
+            text-decoration: none;
+            list-style-type: none;
+            
+        }
+        .footer-rightside li{
+            color: #111111;
+            font-size:large;
+        }
+        .ssss{
+            display: flex;
+        }

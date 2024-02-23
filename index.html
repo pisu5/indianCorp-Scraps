@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KabadiWala - Your Recycling Partner</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>KabadiWala</h1>
+      <p>Your Recycling Partner</p>
+    </header>
+
+    <nav>
+      <img src="./assest/logo-kw.jpg" alt="KabadiWala Logo" class="logo" />
+      <div class="menu-icon">&#9776;</div>
+      <ul>
+        <li><a href="./Home">Home</a></li>
+        <li><a href="./Service">Service</a></li>
+        <li><a href="./About">About Us</a></li>
+        <li><a href="./porfolio">Portfolio</a></li>
+        <li><a href="./Gallery">Gallery</a></li>
+        <li><a href="./Sign Up">Sign Up</a></li>
+        <li><a href="./Login">Login</a></li>
+      </ul>
+    </nav>
+
+    <section>
+      <h2>Welcome to KabadiWala</h2>
+      <p>KabadiWala is your go-to platform for recycling</p>
+
+      <section class="section-main">
+        <h2>Welcome to KabadiWala</h2>
+        <p>
+          KabadiWala is your go-to platform for recycling. We make it easy for
+          you to sell your scrap and contribute to a greener environment.
+        </p>
+
+        <div class="how-it-works">
+          <h2>How It Works</h2>
+          <p>1. Sign up on our platform</p>
+          <p>2. Browse our services and schedule a pickup</p>
+          <p>3. Our team will collect your scrap</p>
+          <p>4. Receive payment for your recyclables</p>
+        </div>
+
+        <div class="contact-form">
+          <h2>Contact Us</h2>
+          <p>
+            If you have any questions or need assistance, feel free to reach out
+            to us using the form below:
+          </p>
+
+          <!-- Add your contact form here -->
+          <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="why-choose-us">
+        <h2>Why Choose Us</h2>
+        <div class="choose-us-content">
+          <div class="choose-us-item">
+            <h3>Expert Team</h3>
+            <p>
+              Our experienced team is dedicated to providing top-notch recycling
+              services.
+            </p>
+          </div>
+          <div class="choose-us-item">
+            <h3>Eco-Friendly Solutions</h3>
+            <p>
+              We are committed to eco-friendly practices, contributing to a
+              greener environment.
+            </p>
+          </div>
+          <div class="choose-us-item">
+            <h3>Convenient Pickup</h3>
+            <p>
+              Schedule pickups at your convenience, making recycling hassle-free
+              for you.
+            </p>
+          </div>
+          <div class="choose-us-item">
+            <h3>Good Pricw</h3>
+            <p>we give Higher price</p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="scrap-types">
+      <h2>Accepted Scrap Types</h2>
+      <div class="scrap-types-list">
+        <div class="scrap-type">
+          <h3>Paper and Cardboard</h3>
+          <p>
+            Explore various paper scraps like newspapers, magazines, and
+            cardboard.
+          </p>
+        </div>
+        <div class="scrap-type">
+          <h3>Metal</h3>
+          <p>Discover metal scraps and their corresponding prices.</p>
+        </div>
+        <div class="scrap-type">
+          <h3>Plastic</h3>
+          <p>View and compare prices for different types of plastic scraps.</p>
+        </div>
+        <div class="scrap-type">
+          <h3>Electronic</h3>
+          <p>
+            Find information on electronic scraps and their recycling values.
+          </p>
+        </div>
+        <div class="scrap-type">
+          <h3>Automotive</h3>
+          <p>Explore scrap options from automotive components and parts.</p>
+        </div>
+        <div class="scrap-type">
+          <h3>Textile</h3>
+          <p>Learn about textile scraps and their associated prices.</p>
+        </div>
+        <div class="scrap-type">
+          <h3>General</h3>
+          <p>Discover other general scraps and their recycling rates.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="scrap-types">
+      <h2>Accepted Scrap Types</h2>
+      <div class="scrap-types-list">
+        <div class="scrap-type" onclick="showScrapDetails('Paper')">
+          <h3>Paper and Cardboard</h3>
+          <p>
+            Explore various paper scraps like newspapers, magazines, and
+            cardboard.
+          </p>
+        </div>
+        <!-- Add more scrap types with their corresponding onclick events -->
+      </div>
+    </section>
+
+    <section class="scrap-details" id="paperDetails">
+      <h2>Paper and Cardboard Details</h2>
+      <p>Price per kg: $1.50</p>
+      <p>Quantity you want to sell:</p>
+      <input type="number" id="quantity" placeholder="Enter quantity" />
+      <button onclick="raisePickupRequest('Paper')">
+        Raise Pickup Request
+      </button>
+      <p>For support, call: 123-456-7890</p>
+      <button onclick="hideScrapDetails()">Close Details</button>
+    </section>
+
+    <!-- Your existing footer or other sections can be added here -->
+    <footer>
+      <div class="footer">
+        <div class="footerlogo">
+          <img src="./assest/logo-kw.jpg" height="100px" width="100px" />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, a
+            facere?
+            <br />
+            Tenetur explicabo corrupti quisquam amet, consectetur aliquid
+            consequuntur,
+            <br />
+            tempora doloremque debitis nam ipsam voluptates eaque, natus
+            laborum.
+          </p>
+        </div>
+
+        <div class="footer-rightside">
+          <div class="footer-services">
+            <h2 class="">Services</h2>
+            <ul>
+              <li>
+                Scrap <br />
+                collection
+              </li>
+              <li>
+                paper's <br />
+                reading
+              </li>
+              <li>
+                Vehicle <br />
+                Reading
+              </li>
+              <li>Dismonthing</li>
+              <li>Society Tie up</li>
+              <li>junk removal</li>
+            </ul>
+          </div>
+         
+          
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function showScrapDetails(scrapType) {
+        // Hide all scrap details sections
+        hideAllScrapDetails();
+
+        // Show the details section corresponding to the clicked scrap type
+        const detailsSection = document.getElementById(
+          `${scrapType.toLowerCase()}Details`
+        );
+        detailsSection.style.display = "block";
+      }
+
+      function hideAllScrapDetails() {
+        // Hide all scrap details sections
+        const allDetailsSections = document.querySelectorAll(".scrap-details");
+        allDetailsSections.forEach((section) => {
+          section.style.display = "none";
+        });
+      }
+
+      function hideScrapDetails() {
+        // Hide the current scrap details section
+        hideAllScrapDetails();
+      }
+
+      function raisePickupRequest(scrapType) {
+        // Get the quantity input value
+        const quantityInput = document.getElementById("quantity");
+        const quantity = quantityInput.value;
+
+        // Perform logic to raise a pickup request with scrapType and quantity
+        // ...
+
+        // Optional: Display a success message or perform additional actions
+        alert(
+          `Pickup request for ${quantity} kg of ${scrapType} raised successfully!`
+        );
+      }
+    </script>
+
+    <!-- Your existing footer or other sections can be added here -->
+  </body>
+</html>
