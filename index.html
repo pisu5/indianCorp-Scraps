@@ -5,53 +5,158 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KabadiWala - Your Recycling Partner</title>
     <link rel="stylesheet" href="./css/index.css" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
 
   <body>
-    <header>
-      <h1>KabadiWala</h1>
-      <p>Your Recycling Partner</p>
-    </header>
 
-    <nav>
-      <img src="./assest/logo-kw.jpg" alt="KabadiWala Logo" class="logo" />
-      <div class="menu-icon">&#9776;</div>
-      <ul>
-        <li><a href="./Home">Home</a></li>
-        <li><a href="./Service">Service</a></li>
-        <li><a href="./About">About Us</a></li>
-        <li><a href="./porfolio">Portfolio</a></li>
-        <li><a href="./Gallery">Gallery</a></li>
-        <li><a href="./Sign Up">Sign Up</a></li>
-        <li><a href="./Login">Login</a></li>
-      </ul>
-    </nav>
 
-    <section>
-      <h2>Welcome to KabadiWala</h2>
-      <p>KabadiWala is your go-to platform for recycling</p>
+    <!------ Include the above in your HEAD tag ---------->
+  
+  <header> <nav class="navbar container navbar-expand-lg navbar-light nav-color">
+    <a class="navbar-brand" href="#"> 
+      <img  src="./assest/logo-kw.png" height="100px" width="100px" alt="logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <section class="section-main">
-        <h2>Welcome to KabadiWala</h2>
-        <p>
-          KabadiWala is your go-to platform for recycling. We make it easy for
-          you to sell your scrap and contribute to a greener environment.
-        </p>
-
-        <div class="how-it-works">
-          <h2>How It Works</h2>
-          <p>1. Sign up on our platform</p>
-          <p>2. Browse our services and schedule a pickup</p>
-          <p>3. Our team will collect your scrap</p>
-          <p>4. Receive payment for your recyclables</p>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+      <li class="nav-item active"> <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> </li>
+      <li class="nav-item"> <a class="nav-link" href="#">Portfolio</a> </li>
+      <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Services </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+      </li>
+       <li class="nav-item"> <a class="nav-link" href="#">Services</a> </li>
+       <li class="nav-item"> <a class="nav-link" href="#">About us</a> </li>
+       <li class="nav-item"> <a class="nav-link" href="#">Testimonals</a> </li>
+       <li class="nav-item"> <a class="nav-link" href="./legal.html">Legal</a> </li>
+       <li class="nav-item"> <a class="nav-link" href="#">Login</a> </li>
+    </ul>
+    </div>
+   </nav>
+    </header> 
+   
+  <div class="banner">
+     <video autoplay muted loop class="tagline-video">
+      <source src="./assest/womenscraps.mp4" type="video/mp4">
+    </video> <div class="overlay"></div>
+      <div class="banner-innner">
+      <div class="container">
+      <div class="row">
+      
+        <div class="col-md-12">
+        <div class="banner-left">
+          <h1>Every scrap holds a story of renewal, as we redefine waste into opportunity for a sustainable future. </h1>
+        <p>At KabadiWala, we believe in the beauty of recycling, where each scrap tells a story of environmental responsibility and a commitment to a cleaner planet</p>
+        <a href="#"> Contact </a>
         </div>
+      </div>
+
+      </div>
+    </div>
+    </div>
+    </div>	
+<!-- banner closed with header -->
+
+<!--why choose us-->
+
+<div class="feat bg-gray pt-5 pb-5">
+  <div class="container">
+    <div class="row">
+      <div class="section-head col-sm-12">
+        <h4><span>Why Choose</span> Us?</h4>
+        <p>Our experienced team is dedicated to providing top-notch recycling services..</p>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="item">
+           <span class="icon feature_box_col_one"><img class="fa fa-globe" src="./assest/group.png" alt="Expert team"></span>
+          <h6>Expert Team</h6>
+          <p>We use latest technology for the latest world because we know the demand of peoples.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="item"> <span class="icon feature_box_col_two"><img class="fa fa-anchor" src="./assest/distribution.png" alt="pickup"></i></span>
+          <h6>Convenient Pickup</h6>
+          <p>Schedule pickups at your convenience, making recycling hassle-free for you..</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="item"> <span class="icon feature_box_col_three"><img class="fa fa-hourglass-half" src="./assest/saving.png" alt="payouts"></span>
+          <h6>High Payouts</h6>
+          <p>We offer competitive prices for your recyclables, ensuring you get the best value for your scrap.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="item"> <span class="icon feature_box_col_four"><img class="fa fa-database" src="./assest/economic-disparities.png" alt="eco-friendly"></span>
+          <h6>Eco-Friendly Solutions</h6>
+          <p>We are committed to eco-friendly practices, contributing to a greener environment.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="item"> <span class="icon feature_box_col_five"><img  class="fa fa-upload" src="./assest/sustainable.png" alt="environment"></span>
+          <h6>Environmental Impact</h6>
+          <p>By choosing KabadiWala, you contribute to a cleaner environment. Recycling with us means making a positive impact on the planet.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="item"> <span class="icon feature_box_col_six"><img  class="fa fa-upload" src="./assest/icons8-fast-48.png" alt="environment"></span>
+          <h6>Quick Services</h6>
+          <p>Our team ensures fast and efficient service.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="how-it-works">
+  <h2>How It Works</h2>
+  <div class="steps-container">
+      <div class="step animate-fade-in">
+          <img src="step1-icon.png" alt="Step 1">
+          <h3>Sign Up</h3>
+          <p>Create an account on KabadiWala platform.</p>
+      </div>
+
+      <div class="step animate-fade-in">
+          <img src="step2-icon.png" alt="Step 2">
+          <h3>Schedule Pickup</h3>
+          <p>Browse services and schedule a pickup at your convenience.</p>
+      </div>
+
+      <div class="step animate-fade-in">
+          <img src="step3-icon.png" alt="Step 3">
+          <h3>Collect Scrap</h3>
+          <p>Our team will collect your scrap materials.</p>
+      </div>
+
+      <div class="step animate-fade-in">
+          <img src="step4-icon.png" alt="Step 4">
+          <h3>Get Paid</h3>
+          <p>Receive payment for your recyclables.</p>
+      </div>
+  </div>
+</section>
+
+      
+      
 
         <div class="contact-form">
-          <h2>Contact Us</h2>
-          <p>
-            If you have any questions or need assistance, feel free to reach out
-            to us using the form below:
-          </p>
+          <div class="contact-form-content">
+            <h2>Contact Us</h2>
+            <p>
+              If you have any questions or need assistance, feel free to reach out
+              to us using the form below:
+            </p>
+
+          </div>
+         
 
           <!-- Add your contact form here -->
           <form>
@@ -67,77 +172,52 @@
             <button type="submit">Submit</button>
           </form>
         </div>
-      </section>
+    
 
-      <section class="why-choose-us">
-        <h2>Why Choose Us</h2>
-        <div class="choose-us-content">
-          <div class="choose-us-item">
-            <h3>Expert Team</h3>
-            <p>
-              Our experienced team is dedicated to providing top-notch recycling
-              services.
-            </p>
-          </div>
-          <div class="choose-us-item">
-            <h3>Eco-Friendly Solutions</h3>
-            <p>
-              We are committed to eco-friendly practices, contributing to a
-              greener environment.
-            </p>
-          </div>
-          <div class="choose-us-item">
-            <h3>Convenient Pickup</h3>
-            <p>
-              Schedule pickups at your convenience, making recycling hassle-free
-              for you.
-            </p>
-          </div>
-          <div class="choose-us-item">
-            <h3>Good Pricw</h3>
-            <p>we give Higher price</p>
-          </div>
-        </div>
-      </section>
-    </section>
+      
+    
+
+   
 
     <section class="scrap-types">
       <h2>Accepted Scrap Types</h2>
       <div class="scrap-types-list">
-        <div class="scrap-type">
+        <div class="scrap-type paper">
           <h3>Paper and Cardboard</h3>
           <p>
             Explore various paper scraps like newspapers, magazines, and
             cardboard.
           </p>
         </div>
-        <div class="scrap-type">
+        <div class="scrap-type metal">
           <h3>Metal</h3>
           <p>Discover metal scraps and their corresponding prices.</p>
         </div>
-        <div class="scrap-type">
+        <div class="scrap-type plastic">
           <h3>Plastic</h3>
           <p>View and compare prices for different types of plastic scraps.</p>
         </div>
-        <div class="scrap-type">
+        <div class="scrap-type electronic">
           <h3>Electronic</h3>
           <p>
             Find information on electronic scraps and their recycling values.
           </p>
         </div>
-        <div class="scrap-type">
+        <div class="scrap-type automotive">
           <h3>Automotive</h3>
           <p>Explore scrap options from automotive components and parts.</p>
         </div>
-        <div class="scrap-type">
+        <div class="scrap-type textile">
           <h3>Textile</h3>
           <p>Learn about textile scraps and their associated prices.</p>
         </div>
-        <div class="scrap-type">
+        <div class="scrap-type general ">
           <h3>General</h3>
           <p>Discover other general scraps and their recycling rates.</p>
         </div>
       </div>
+      
+      
     </section>
 
     <section class="scrap-types">
@@ -174,10 +254,10 @@
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, a
             facere?
-            <br />
+            <br>
             Tenetur explicabo corrupti quisquam amet, consectetur aliquid
             consequuntur,
-            <br />
+            <br>
             tempora doloremque debitis nam ipsam voluptates eaque, natus
             laborum.
           </p>
@@ -235,47 +315,9 @@
           </div>
       </footer>
       
-
-    <script>
-      function showScrapDetails(scrapType) {
-        // Hide all scrap details sections
-        hideAllScrapDetails();
-
-        // Show the details section corresponding to the clicked scrap type
-        const detailsSection = document.getElementById(
-          `${scrapType.toLowerCase()}Details`
-        );
-        detailsSection.style.display = "block";
-      }
-
-      function hideAllScrapDetails() {
-        // Hide all scrap details sections
-        const allDetailsSections = document.querySelectorAll(".scrap-details");
-        allDetailsSections.forEach((section) => {
-          section.style.display = "none";
-        });
-      }
-
-      function hideScrapDetails() {
-        // Hide the current scrap details section
-        hideAllScrapDetails();
-      }
-
-      function raisePickupRequest(scrapType) {
-        // Get the quantity input value
-        const quantityInput = document.getElementById("quantity");
-        const quantity = quantityInput.value;
-
-        // Perform logic to raise a pickup request with scrapType and quantity
-        // ...
-
-        // Optional: Display a success message or perform additional actions
-        alert(
-          `Pickup request for ${quantity} kg of ${scrapType} raised successfully!`
-        );
-      }
-    </script>
-
+    
+    
+<script src="./main.js"></script>
     <!-- Your existing footer or other sections can be added here -->
   </body>
 </html>
