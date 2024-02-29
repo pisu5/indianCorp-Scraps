@@ -1,4 +1,9 @@
 
+$(document).ready(function () {
+  $(".navbar-toggler").click(function () {
+    $(".navbar-collapse").toggleClass("show");
+  });
+});
       function showScrapDetails(scrapType) {
         // Hide all scrap details sections
         hideAllScrapDetails();
