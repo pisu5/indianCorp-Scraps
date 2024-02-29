@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+      /* General Styles */
+
+      body {
+        margin: 0;
+        font-family: "Your Preferred Font", sans-serif; /* Add a preferred font */
+        overflow-x: hidden; /* Prevent horizontal scroll */
+      }
+
+      /* Header Styles */
+
+      header {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        z-index: 11;
+      }
+
+      /* Navbar Styles */
+
+      .navbar {
+        background-color: transparent !important; /* Ensure transparency */
+      }
+
+      .navbar-light .navbar-brand,
+      .navbar-light .navbar-nav .nav-link {
+        color: #fff;
+      }
+
+      .navbar-light .navbar-brand {
+        color: rgb(255, 255, 255, 0.9);
+        font-weight: 700;
+        font-size: 30px;
+        text-transform: uppercase;
+        text-shadow: 1px 2px #6d2929;
+      }
+
+      .navbar-light .navbar-nav .nav-link {
+        font-weight: 500;
+        font-size: 18px;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+
+      .navbar-light .navbar-nav .active > .nav-link,
+      .navbar-light .navbar-nav .nav-link.active,
+      .navbar-light .navbar-nav .nav-link.show,
+      .navbar-light .navbar-nav .show > .nav-link {
+        color: #fff;
+      }
+
+      .navbar-light .navbar-nav .active > .nav-link,
+      .navbar-light .navbar-nav .nav-link.active,
+      .navbar-light .navbar-nav .nav-link.show,
+      .navbar-light .navbar-nav .show > .nav-link:hover {
+        color: #1ee93d;
+      }
+
+      .navbar-light .navbar-brand:focus,
+      .navbar-light .navbar-brand:hover,
+      .nav-color .navbar-nav .nav-link:focus,
+      .nav-color .navbar-nav .nav-link:hover {
+        color: #fff;
+      }
+
+      /* Banner Styles */
+
+      .banner {
+        height: 100vh;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        padding: 200px 0;
+      }
+
+      .banner video {
+        width: 100%;
+        position: absolute;
+        overflow: hidden;
+      }
+
+      .banner-innner {
+        padding: 200px 0;
+      }
+
+      .overlay {
+        background: transparent;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .banner-left {
+        text-align: center;
+        width: 65%;
+        margin: 0 auto;
+      }
+
+      .banner-left h1 {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 42px;
+        font-weight: 800;
+        line-height: 50px;
+        text-shadow: 1px 2px #000;
+        margin-bottom: 15px;
+      }
+
+      .banner-left p {
+        color: #fff;
+        letter-spacing: 0.5px;
+        line-height: 28px;
+        margin-bottom: 30px;
+      }
+
+      .custom-btn,
+      .banner-left a {
+        width: 20%;
+        background: #08f408;
+        text-decoration: none;
+        color: #fff;
+        letter-spacing: 2.5px;
+        transition: 0.8s ease; /* Add the 's' to '0.8 ease' */
+        padding: 8px 35px;
+        border-radius: 4px;
+      }
+
+      .banner-left a:hover {
+        letter-spacing: 3px;
+      }
+
+      /* Responsive Styles */
+
+      @media only screen and (max-width: 800px) {
+        .banner {
+          padding: 120px 0;
+          height: auto;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+          padding-left: 0;
+        }
+
+        .banner-innner {
+          padding: 120px 0;
+        }
+
+        .nav-color {
+          background: #ffffff;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .container nav ul {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 60px;
+          left: 0;
+          width: 100%;
+          background-color: #302f2b;
+          z-index: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar container navbar-expand-lg navbar-light nav-color">
+        <a class="navbar-brand" href="#">
+          <img
+            src="./assest/logo-kw.png"
+            height="100px"
+            width="100px"
+            alt="KabadiWala Logo"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Services
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">About us</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./legal.html">Legal</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section class="banner">
+      <video autoplay muted loop class="tagline-video">
+        <source src="./assest/womenscraps.mp4" type="video/mp4" />
+      </video>
+      <div class="overlay"></div>
+      <div class="banner-inner">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="banner-left">
+                <h1>
+                  Every scrap holds a story of renewal, as we redefine waste
+                  into opportunity for a sustainable future.
+                </h1>
+                <p>
+                  At KabadiWala, we believe in the beauty of recycling, where
+                  each scrap tells a story of environmental responsibility and a
+                  commitment to a cleaner planet.
+                </p>
+                <a href="#" class="custom-btn">Contact </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Add more sections as needed -->
+
+    <!-- Include your scripts at the end -->
+  </body>
+</html>

@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+.root{
+    margin:20px;
+}
+
+.div-head {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+}
+
+.heading {
+  margin: 0;
+}
+
+.reside {
+  margin-top: 20px;
+}
+
+h3 {
+  margin: 0;
+}
+
+.places {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.place {
+  border: 2px solid #333;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.place a {
+  text-decoration: none;
+  color: #333;
+}
+.note-places {
+  margin-top: 12px;
+}
+.note-places h3 {
+  color: red;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  width: 100%;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.list-item {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.list-item:hover {
+  background-color: #ddd;
+}
+
+.hidden-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* You can adjust this value based on your design */
+}
+
+.drop-search {
+  flex-wrap: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.hidden-dropdown {
+  margin-right: 10px;
+  width: 200px;
+  height: 50px; /* Adjust the spacing between dropdown and search */
+}
+
+.form-control {
+  width: 700px;
+  height: 50px;
+}
+
+.box-container {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+overflow: auto;
+  padding: 20px;
+}
+.box {
+  text-align: center;
+  width: 150px;
+  height: auto;
+
+  padding: 15px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+.box:hover {
+  background-color: #4caf50; /* Green background on hover */
+  color: #fff; /* White text on hover */
+}
+
+.box i {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.details-container {
+  display: flex;
+}
+/* Common styles */
+.variety {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.div-varient {
+  width: calc(25% - 10px);
+  margin: 5px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}

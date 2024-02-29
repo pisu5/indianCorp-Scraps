@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scraps Prices</title>
+    <link rel="stylesheet" href="./css/scrapsprices.css" />
+  </head>
+  <body>
+    
+    <div class="root">
+      <div class="div-head">
+        <h1 class="heading">Scraps Prices</h1>
+      </div>
+      <div class="reside">
+        <h3>Where do you reside?</h3>
+        <div class="places">
+          <div class="place">
+            <a href="#">Videsha</a>
+          </div>
+          <div class="place">
+            <a href="#">Bhopal</a>
+          </div>
+          <div class="place">
+            <a href="#">Khandwa</a>
+          </div>
+          <div class="place">
+            <a href="#">Indore</a>
+          </div>
+          <div class="place">
+            <a href="#">Jabalpur</a>
+          </div>
+          <div class="place">
+            <a href="#">Sehore</a>
+          </div>
+        </div>
+        <div class="find-place">
+          <p>unable to find ,<span>search here</span></p>
+          <input type="search" /> search
+        </div>
+        <div class="note-places">
+          <h3>Note: Currently our services avilable only in Madhya Pradesh</h3>
+        </div>
+      </div>
+    </div>
+
+    <!--Hidden content-->
+    <div class="hidden-content">
+      <div class="drop-search">
+        <div class="hidden-dropdown">
+          <select class="hidden-dropdown" name="select city" id="">
+            <option value="Bhoapl">bhopak</option>
+            <option value="Bhoapl">bhopak</option>
+            <option value="Bhoapl">bhopak</option>
+            <option value="Bhoapl">bhopak</option>
+            <option value="Bhoapl">bhopak</option>
+            <option value="Bhoapl">bhopak</option>
+          </select>
+          <!--Drop down-->
+        </div>
+        <div class="hidden-search">
+          <input
+            class="form-control"
+            type="search"
+            placeholder="Search"
+            aria-label="Search city"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="box-container">
+      <div class="box" onclick="fetchDetails('All')">
+        <i class="fas fa-recycle"></i>
+        <p>All</p>
+      </div>
+      <div class="box" onclick="fetchDetails('Paper')">
+        <i class="fas fa-file"></i>
+        <p>Paper</p>
+      </div>
+      <div class="box" onclick="fetchDetails('Metal')">
+        <i class="fas fa-cogs"></i>
+        <p>Metal</p>
+      </div>
+      <div class="box" onclick="fetchDetails('Plastic')">
+        <i class="fas fa-bottle"></i>
+        <p>Plastic</p>
+      </div>
+      <div class="box" onclick="fetchDetails('E-waste')">
+        <i class="fas fa-plug"></i>
+        <p>E-waste</p>
+      </div>
+      <div class="box" onclick="fetchDetails('Other')">
+        <i class="fas fa-cube"></i>
+        <p>Other</p>
+      </div>
+    </div>
+    <!--Location data and dynamiccaly created by js-->
+
+    <!--right side content-->
+    <div class="variety">
+      <div class="div-varient">Lorem, ipsum dolor.</div>
+      <div class="div-varient">Lorem, ipsum dolor.</div>
+      <div class="div-varient">Lorem ipsum dolor sit.</div>
+      <div class="div-varient">Lorem, ipsum dolor.</div>
+      <div class="div-varient">Lorem ipsum dolor sit.</div>
+      <div class="div-varient">Lorem ipsum dolor sit.</div>
+      <div class="div-varient">Lorem ipsum dolor sit.</div>
+      <div class="div-varient">Lorem ipsum dolor sit.</div>
+      <!--content created by js-->
+    </div>
+
+    <script src="./js files/scrapsprices.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+  </body>
+</html>

@@ -4,180 +4,268 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KabadiWala - Your Recycling Partner</title>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
     <link rel="stylesheet" href="./css/index.css" />
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-ezI5EXzJBDVAzoT1GAiEJLpNvl1wGGXAIlCuhHT9fdU5b3tNBRj8cBTxK5st9ZZ2" crossorigin="anonymous">
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
-
   <body>
+    <header>
+      <nav class="navbar container navbar-expand-lg navbar-light nav-color">
+        <a class="navbar-brand" href="#">
+          <img
+            src="./assest/logo-kw.png"
+            height="100px"
+            width="100px"
+            alt="logo"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link nav-home" href="#"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Price list</a></li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Services
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About us</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Testimonals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./legal.html">Legal</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-    <!------ Include the above in your HEAD tag ---------->
-  
-  <header> <nav class="navbar container navbar-expand-lg navbar-light nav-color">
-    <a class="navbar-brand" href="#"> 
-      <img  src="./assest/logo-kw.png" height="100px" width="100px" alt="logo"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-    <ul class="navbar-nav">
-      <li class="nav-item active"> <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> </li>
-      <li class="nav-item"> <a class="nav-link" href="#">Portfolio</a> </li>
-      <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Services </a>
-      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-      </div>
-      </li>
-       <li class="nav-item"> <a class="nav-link" href="#">Services</a> </li>
-       <li class="nav-item"> <a class="nav-link" href="#">About us</a> </li>
-       <li class="nav-item"> <a class="nav-link" href="#">Testimonals</a> </li>
-       <li class="nav-item"> <a class="nav-link" href="./legal.html">Legal</a> </li>
-       <li class="nav-item"> <a class="nav-link" href="#">Login</a> </li>
-    </ul>
-    </div>
-   </nav>
-    </header> 
-   
-  <div class="banner">
-     <video autoplay muted loop class="tagline-video">
-      <source src="./assest/womenscraps.mp4" type="video/mp4">
-    </video> <div class="overlay"></div>
+    <div class="banner">
+      <video autoplay muted loop class="tagline-video">
+        <source src="./assest/womenscraps.mp4" type="video/mp4" />
+      </video>
+      <div class="overlay"></div>
       <div class="banner-innner">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="banner-left">
+                <h1>
+                  Every scrap holds a story of renewal, as we redefine waste
+                  into opportunity for a sustainable future.
+                </h1>
+                <p>
+                  At KabadiWala, we believe in the beauty of recycling, where
+                  each scrap tells a story of environmental responsibility and a
+                  commitment to a cleaner planet
+                </p>
+                <a href="#" class="custom-btn">Contact </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- banner closed with header -->
+
+    <!--why choose us-->
+
+    <div class="feat bg-gray pt-5 pb-5">
       <div class="container">
-      <div class="row">
-      
-        <div class="col-md-12">
-        <div class="banner-left">
-          <h1>Every scrap holds a story of renewal, as we redefine waste into opportunity for a sustainable future. </h1>
-        <p>At KabadiWala, we believe in the beauty of recycling, where each scrap tells a story of environmental responsibility and a commitment to a cleaner planet</p>
-        <a href="#"> Contact </a>
+        <div class="row">
+          <div class="section-head col-sm-12">
+            <h4><span>Why Choose</span> Us?</h4>
+            <p>
+              Our experienced team is dedicated to providing top-notch recycling
+              services..
+            </p>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <div class="item">
+              <span class="icon feature_box_col_one"
+                ><img
+                  class="fa fa-globe"
+                  src="./assest/group.png"
+                  alt="Expert team"
+              /></span>
+              <h6>Expert Team</h6>
+              <p>
+                We use latest technology for the latest world because we know
+                the demand of peoples.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <div class="item">
+              <span class="icon feature_box_col_two">
+                <img
+                  class="fa fa-anchor"
+                  src="./assest/distribution.png"
+                  alt="pickup"
+              /></span>
+              <h6>Convenient Pickup</h6>
+              <p>
+                Schedule pickups at your convenience, making recycling
+                hassle-free for you..
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <div class="item">
+              <span class="icon feature_box_col_three"
+                ><img
+                  class="fa fa-hourglass-half"
+                  src="./assest/saving.png"
+                  alt="payouts"
+              /></span>
+              <h6>High Payouts</h6>
+              <p>
+                We offer competitive prices for your recyclables, ensuring you
+                get the best value for your scrap.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <div class="item">
+              <span class="icon feature_box_col_four"
+                ><img
+                  class="fa fa-database"
+                  src="./assest/economic-disparities.png"
+                  alt="eco-friendly"
+              /></span>
+              <h6>Eco-Friendly Solutions</h6>
+              <p>
+                We are committed to eco-friendly practices, contributing to a
+                greener environment.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <div class="item">
+              <span class="icon feature_box_col_five"
+                ><img
+                  class="fa fa-upload"
+                  src="./assest/sustainable.png"
+                  alt="environment"
+              /></span>
+              <h6>Environmental Impact</h6>
+              <p>
+                By choosing KabadiWala, you contribute to a cleaner environment.
+                Recycling with us means making a positive impact on the planet.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <div class="item">
+              <span class="icon feature_box_col_six"
+                ><img
+                  class="fa fa-upload"
+                  src="./assest/icons8-fast-48.png"
+                  alt="environment"
+              /></span>
+              <h6>Quick Services</h6>
+              <p>Our team ensures fast and efficient service.</p>
+            </div>
+          </div>
         </div>
-      </div>
-
       </div>
     </div>
-    </div>
-    </div>	
-<!-- banner closed with header -->
+<!--How it works-->
+    <section class="how-it-works">
+      <h2>How It Works</h2>
+      <div class="steps-container">
+        <div class="step animate-fade-in">
+          <!-- Replace the image tag with Font Awesome icon -->
+<i class="fas fa-user-plus"></i> Signup
 
-<!--why choose us-->
-
-<div class="feat bg-gray pt-5 pb-5">
-  <div class="container">
-    <div class="row">
-      <div class="section-head col-sm-12">
-        <h4><span>Why Choose</span> Us?</h4>
-        <p>Our experienced team is dedicated to providing top-notch recycling services..</p>
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <div class="item">
-           <span class="icon feature_box_col_one"><img class="fa fa-globe" src="./assest/group.png" alt="Expert team"></span>
-          <h6>Expert Team</h6>
-          <p>We use latest technology for the latest world because we know the demand of peoples.</p>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <div class="item"> <span class="icon feature_box_col_two"><img class="fa fa-anchor" src="./assest/distribution.png" alt="pickup"></i></span>
-          <h6>Convenient Pickup</h6>
-          <p>Schedule pickups at your convenience, making recycling hassle-free for you..</p>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <div class="item"> <span class="icon feature_box_col_three"><img class="fa fa-hourglass-half" src="./assest/saving.png" alt="payouts"></span>
-          <h6>High Payouts</h6>
-          <p>We offer competitive prices for your recyclables, ensuring you get the best value for your scrap.</p>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <div class="item"> <span class="icon feature_box_col_four"><img class="fa fa-database" src="./assest/economic-disparities.png" alt="eco-friendly"></span>
-          <h6>Eco-Friendly Solutions</h6>
-          <p>We are committed to eco-friendly practices, contributing to a greener environment.</p>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <div class="item"> <span class="icon feature_box_col_five"><img  class="fa fa-upload" src="./assest/sustainable.png" alt="environment"></span>
-          <h6>Environmental Impact</h6>
-          <p>By choosing KabadiWala, you contribute to a cleaner environment. Recycling with us means making a positive impact on the planet.</p>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <div class="item"> <span class="icon feature_box_col_six"><img  class="fa fa-upload" src="./assest/icons8-fast-48.png" alt="environment"></span>
-          <h6>Quick Services</h6>
-          <p>Our team ensures fast and efficient service.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<section class="how-it-works">
-  <h2>How It Works</h2>
-  <div class="steps-container">
-      <div class="step animate-fade-in">
-          <img src="step1-icon.png" alt="Step 1">
           <h3>Sign Up</h3>
           <p>Create an account on KabadiWala platform.</p>
-      </div>
+        </div>
 
-      <div class="step animate-fade-in">
-          <img src="step2-icon.png" alt="Step 2">
+        <div class="step animate-fade-in">
+          <img src="step2-icon.png" alt="Step 2" />
           <h3>Schedule Pickup</h3>
           <p>Browse services and schedule a pickup at your convenience.</p>
-      </div>
+        </div>
 
-      <div class="step animate-fade-in">
-          <img src="step3-icon.png" alt="Step 3">
+        <div class="step animate-fade-in">
+          <img src="step3-icon.png" alt="Step 3" />
           <h3>Collect Scrap</h3>
           <p>Our team will collect your scrap materials.</p>
-      </div>
+        </div>
 
-      <div class="step animate-fade-in">
-          <img src="step4-icon.png" alt="Step 4">
+        <div class="step animate-fade-in">
+          <img src="step4-icon.png" alt="Step 4" />
           <h3>Get Paid</h3>
           <p>Receive payment for your recyclables.</p>
-      </div>
-  </div>
-</section>
-
-      
-      
-
-        <div class="contact-form">
-          <div class="contact-form-content">
-            <h2>Contact Us</h2>
-            <p>
-              If you have any questions or need assistance, feel free to reach out
-              to us using the form below:
-            </p>
-
-          </div>
-         
-
-          <!-- Add your contact form here -->
-          <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required />
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required />
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-
-            <button type="submit">Submit</button>
-          </form>
         </div>
-    
+      </div>
+    </section>
 
-      
-    
+    <div class="contact-form">
+      <div class="contact-form-content">
+        <h2>Contact Us</h2>
+        <p>
+          If you have any questions or need assistance, feel free to reach out
+          to us using the form below:
+        </p>
+      </div>
 
-   
+      <!-- Add your contact form here -->
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
 
     <section class="scrap-types">
       <h2>Accepted Scrap Types</h2>
@@ -211,113 +299,97 @@
           <h3>Textile</h3>
           <p>Learn about textile scraps and their associated prices.</p>
         </div>
-        <div class="scrap-type general ">
+        <div class="scrap-type general">
           <h3>General</h3>
           <p>Discover other general scraps and their recycling rates.</p>
         </div>
       </div>
-      
-      
     </section>
 
-    <section class="scrap-types">
-      <h2>Accepted Scrap Types</h2>
-      <div class="scrap-types-list">
-        <div class="scrap-type" onclick="showScrapDetails('Paper')">
-          <h3>Paper and Cardboard</h3>
-          <p>
-            Explore various paper scraps like newspapers, magazines, and
-            cardboard.
-          </p>
+    <!-- Additional Section with H3 Headings and Social Media Icons -->
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-logo">
+          <img
+            src="./assest/logo-kw.png"
+            height="100px"
+            width="100px"
+            alt="KabadiWala Logo"
+          />
         </div>
-        <!-- Add more scrap types with their corresponding onclick events -->
+
+        <div class="footer-info">
+          <p>Your Recycling Partner</p>
+          <p>123 Green Street, Eco City</p>
+          <p>Email: info@kabadiwala.com</p>
+          <p>Phone: +123 456 7890</p>
+        </div>
+
+        <div class="footer-links">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-services">
+          <h2>Services</h2>
+          <ul>
+            <li>Scrap Collection</li>
+            <li>Paper Reading</li>
+            <li>Vehicle Reading</li>
+            <li>Disassembling</li>
+            <li>Society Tie-up</li>
+            <li>Junk Removal</li>
+          </ul>
+        </div>
       </div>
-    </section>
 
-    <section class="scrap-details" id="paperDetails">
-      <h2>Paper and Cardboard Details</h2>
-      <p>Price per kg: $1.50</p>
-      <p>Quantity you want to sell:</p>
-      <input type="number" id="quantity" placeholder="Enter quantity" />
-      <button onclick="raisePickupRequest('Paper')">
-        Raise Pickup Request
-      </button>
-      <p>For support, call: 123-456-7890</p>
-      <button onclick="hideScrapDetails()">Close Details</button>
-    </section>
+      <!-- WhatsApp live chat button -->
+      <div class="whatsapp-chat">
+        <a
+          href="https://wa.me/1234567890"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+         <!--<img src="whatsapp-icon.png" alt="WhatsApp Chat" />--> 
+         <i class="fab fa-whatsapp"></i>
+          Chat with us on WhatsApp
+        </a>
+      </div>
+      <!-- Third-party credits -->
+      <div class="third-party-credits">
+        <p>
+          Icons by:
+          <a
+            href="https://www.flaticon.com/free-icons/sales-team"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="sales team icons"
+            >flaticon</a
+          >,
+          <a target="_blank" href="https://icons8.com/icon/HX4heYPHBZNg/running"
+            >Fast
+          </a>
+          icon by <a target="_blank" href="https://icons8.com">Icons8</a>,
+          <a
+            href="https://www.freepik.com/free-vector/people-recycling-concept_7970451.htm#fromView=search&page=1&position=13&uuid=28d1c697-eeb1-4325-9210-daebe8536183"
+            >Image by freepik</a
+          >
+        </p>
+      </div>
+    </footer>
 
-    <!-- Your existing footer or other sections can be added here -->
-    <footer>
-      <div class="footer">
-        <div class="footerlogo">
-          <img src="./assest/logo-kw.jpg" height="100px" width="100px" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, a
-            facere?
-            <br>
-            Tenetur explicabo corrupti quisquam amet, consectetur aliquid
-            consequuntur,
-            <br>
-            tempora doloremque debitis nam ipsam voluptates eaque, natus
-            laborum.
-          </p>
-        </div>
-
-        <footer class="footer-div">
-          <div class="footer-content">
-              <div class="footer-logo">
-                  <img src="./assest/logo-kw.jpg" alt="KabadiWala Logo">
-              </div>
-      
-              <div class="footer-info">
-                  <p>Your Recycling Partner</p>
-                  <p>123 Green Street, Eco City</p>
-                  <p>Email: info@kabadiwala.com</p>
-                  <p>Phone: +123 456 7890</p>
-              </div>
-      
-              <div class="footer-links">
-                  <h2>Quick Links</h2>
-                  <ul>
-                      <li><a href="#">Home</a></li>
-                      <li><a href="#">Services</a></li>
-                      <li><a href="#">About Us</a></li>
-                      <li><a href="#">Portfolio</a></li>
-                      <li><a href="#">Gallery</a></li>
-                      <li><a href="#">Contact</a></li>
-                  </ul>
-              </div>
-      
-              <div class="footer-services">
-                  <h2>Services</h2>
-                  <ul>
-                      <li>Scrap Collection</li>
-                      <li>Paper Reading</li>
-                      <li>Vehicle Reading</li>
-                      <li>Disassembling</li>
-                      <li>Society Tie-up</li>
-                      <li>Junk Removal</li>
-                  </ul>
-              </div>
-          </div>
-      
-          <!-- WhatsApp live chat button -->
-          <div class="whatsapp-chat">
-              <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
-                  <img src="whatsapp-icon.png" alt="WhatsApp Chat">
-                  Chat with us on WhatsApp
-              </a>
-          </div>
-      
-          <!-- Copyright information -->
-          <div class="copyright">
-              <p>&copy; 2024 KabadiWala. All rights reserved.</p>
-          </div>
-      </footer>
-      
-    
-    
-<script src="./main.js"></script>
-    <!-- Your existing footer or other sections can be added here -->
+    <!-- Copyright information -->
+    <div class="copyright">
+      <p>&copy; 2024 KabadiWala. All rights reserved.</p>
+    </div>
+    <script src="./js files/main.js"></script>
   </body>
 </html>
