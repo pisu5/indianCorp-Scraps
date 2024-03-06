@@ -1,86 +1,405 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
-            overflow-x: hidden;
-        }
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 
-        /* Your existing styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
 
-        /* Floating WhatsApp Button */
-        .whatsapp-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25d366;
-            color: #fff;
-            border: none;
-            border-radius: 50%;
-            padding: 15px;
-            font-size: 20px;
-            cursor: pointer;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
+header{
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    transition: 0.5s ease;
+}
 
-        .whatsapp-btn:hover {
-            background-color: #128c7e;
-        }
+header .brand{
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
 
-        .whatsapp-btn:focus {
-            outline: none;
-        }
+header .brand:hover{
+    color: #09e34e;
+}
 
-        /* Add a fixed container for the WhatsApp chat iframe */
-        .whatsapp-chat-container {
-            position: fixed;
-            bottom: 80px;
-            right: 20px;
-            width: 360px;
-            height: 500px;
-            border-radius: 10px;
-            overflow: hidden;
-            display: none;
-        }
+header .navigation{
+    position: relative;
+}
 
-        .whatsapp-chat-iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
+header .navigation .navigation-items a{
+    position: relative;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:before{
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:hover:before{
+    width: 100%;
+    background: #09d42e;
+}
+
+section{
+  overflow: hidden;
+    padding: 100px 200px;
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(12, 217, 39, 0.959);
+}
+
+.home:before{
+    z-index: 777;
+    content: '';
+    position: absolute;
+    background: rgba(251, 3, 3, 0.034);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.home .content{
+    z-index: 888;
+    color: #fff;
+    width: 70%;
+    margin-top: 50px;
+    display: none;
+}
+
+.home .content.active{
+    display: block;
+}
+
+.home .content h1{
+    font-size: 4em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 75px;
+    margin-bottom: 40px;
+}
+
+.home .content h1 span{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.home .content p{
+    margin-bottom: 65px;
+}
+
+.home .content a{
+    background: #fff;
+    padding: 15px 35px;
+    color: #09d41a;
+    font-size: 1.1em;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.home .content a:hover{
+    background: #09d427;
+    color: #fff;
+}
+
+.home .media-icons{
+    z-index: 888;
+    position: absolute;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s ease;
+}
+
+.home .media-icons a{
+    color: #fff;
+    font-size: 1.6em;
+    transition: 0.3s ease;
+}
+
+.home .media-icons a:not(:last-child){
+    margin-bottom: 20px;
+}
+
+.home .media-icons a:hover{
+    transform: scale(1.3);
+    color: #09d410;
+}
+
+.home img{
+    z-index: 000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-navigation{
+    z-index: 888;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(80px);
+    margin-bottom: 12px;
+}
+
+.slider-navigation .nav-btn{
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+    transition: 0.3s ease;
+}
+
+.slider-navigation .nav-btn.active{
+    background: #09d410;
+}
+
+.slider-navigation .nav-btn:not(:last-child){
+    margin-right: 20px;
+}
+
+.slider-navigation .nav-btn:hover{
+    transform: scale(1.2);
+}
+
+.img-slide{
+    position: absolute;
+    width: 100%;
+    clip-path: circle(0% at 0 50%);
+}
+
+.img-slide.active{
+    clip-path: circle(150% at 0 50%);
+    transition: 2s ease;
+    transition-property: clip-path;
+}
+
+@media (max-width: 1040px){
+    header{
+        padding: 12px 20px;
+    }
+    section{
+        padding: 100px 20px;
+    }
+    .home .media-icons{
+        right: 15px;
+    }
+    header .navigation{
+        display: none;
+    }
+    header .navigation.active{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(1, 1, 1, 0.5);
+    }
+
+    header .navigation .navigation-items a{
+        color: #222;
+        font-size: 1.2em;
+        margin: 20px;
+    }
+    header .navigation .navigation-items a:before{
+        background: #222;
+        height: 5px;
+    }
+    header .navigation .navigation-items{
+        background: #fff;
+        width: 600px;
+        max-width: 600px;
+        margin: 20px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+    }
+    .menu-btn{
+      background-color: rgb(225, 35, 35);
+        background: url(menu.png)no-repeat;
+        background-size: 30px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+    .menu-btn.active{
+        z-index: 999;
+        background: url(close.png)no-repeat;
+        background-size: 25px;
+        background-position: center;
+        transition: 0.3s ease;
+    }
+}
+
+@media (max-width: 560px){
+    .home .content h1{
+        font-size: 3em;
+        line-height: 60px;
+    }
+}
     </style>
-</head>
+  </head>
+  <body>
+    <header>
+     
+      <img src="./assest/logo-kw.png" height="60px" width="60px" alt="logo" style="background-color: #09d41a;">
+      <div class="menu-btn">
+          <div class="navigation">
+              <div class="navigation-items">
+                  <a href="#">Home</a>
+                  <a href="#">About</a>
+                  <a href="#">Explore</a>
+                  <a href="#">Gallery</a>
+                  <a href="#">Contact</a>
+              </div>
+          </div>
+      </div>
+  </header>
 
-<body>
+  <section class="home">
+      <img decoding="async" class="img-slide active" src="./assest/slide_scrap3.jpg" ></img>
+      <img decoding="async" class="img-slide" src="./assest/slide_scrap.jpg" ></img>
+      <img decoding="async" class="img-slide" src="./assest/slide_scrap10.jpg" ></img>
+      <img decoding="async" class="img-slide" src="./assest/slide_scrap12.jpg" ></img>
+      <img decoding="async" class="img-slide" src="./assest/slide_scrap15.jpg" ></img>
+      <div class="content active">
+          <h1>Knock Knock.<br><span>Kabadibala</span></h1>
+          <p>The concept of scrap management aligns with the principles of sustainable resource usage, waste reduction, and environmental stewardship. As such, effective scrap management practices are increasingly emphasized in industrial processes, consumer behavior, and waste management policies.</p>
 
-    <!-- Your existing content goes here -->
 
-    <!-- Floating WhatsApp Button -->
-    <button class="whatsapp-btn" onclick="toggleWhatsappChat()">WhatsApp</button>
+        <a href="#">Read More</a>
+      </div>
+      <div class="content">
+        <h1>STARSHIP UPDATE.<br><span>Rocket</span></h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna anime. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut farhan ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum daily web design nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="content">
+        <h1>Vehicles Scraps.<br><span>Don't go anywhere just call us</span></h1>
+        <p>By purchasing scrap materials, you are contributing to sustainable resource management and supporting the principles of the circular economy. Additionally, you are helping to create market demand for recycled materials, thereby encouraging the recycling industry and promoting environmental conservation.</p>
 
-    <!-- WhatsApp Chat Container -->
-    <div class="whatsapp-chat-container">
-      <img width="16" height="16" src="https://img.icons8.com/officel/16/whatsapp.png" alt="whatsapp"/>
-        <iframe class="whatsapp-chat-iframe" src="https://web.whatsapp.com/send?phone=YOUR_WHATSAPP_NUMBER" frameborder="0"></iframe>
-    </div>
 
-    <script>
-        // Toggle WhatsApp Chat Container
-        function toggleWhatsappChat() {
-            var chatContainer = document.querySelector('.whatsapp-chat-container');
-            chatContainer.style.display = chatContainer.style.display === 'none' ? 'block' : 'none';
-        }
-    </script>
-</body>
+        <a href="#">Read More</a>
+      </div>
+      <div class="content">
+        <h1>Papers Scraps.<br><span>Give us and Get paid</span></h1>
+        <p>Environmental Considerations: Verify that the scrap materials are obtained and managed in compliance with environmental regulations and best practices to minimize their environmental impact.</p>
 
+
+        <a href="#">Read More</a>
+      </div>
+      <div class="content">
+        <h1>Steel Scraps.<br><span>Waste Steel</span></h1>
+        <p>Mechanical processing methods, including shredding, can be used to break down larger steel items into smaller, manageable pieces, facilitating their recycling and recovery.</p>
+
+        <a href="#">Read More</a>
+      </div>
+      <div class="media-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="slider-navigation">
+          <div class="nav-btn active"></div>
+          <div class="nav-btn"></div>
+          <div class="nav-btn"></div>
+          <div class="nav-btn"></div>
+          <div class="nav-btn"></div>
+      </div>
+  </section> 
+  <script>
+    const menuBtn = document.querySelector(".menu-btn");
+const navigation = document.querySelector(".navigation");
+
+menuBtn.addEventListener("click", () => {
+    menuBtn.classList.toggle("active");
+    navigation.classList.toggle("active");
+});
+
+const btns = document.querySelectorAll(".nav-btn");
+const slides = document.querySelectorAll(".img-slide");
+const contents = document.querySelectorAll(".content");
+
+var sliderNav = function(manual){
+    btns.forEach((btn) => {
+        btn.classList.remove("active");
+    });
+
+    slides.forEach((slide) => {
+        slide.classList.remove("active");
+    });
+
+    contents.forEach((content) => {
+        content.classList.remove("active");
+    });
+
+    btns[manual].classList.add("active");
+    slides[manual].classList.add("active");
+    contents[manual].classList.add("active");
+}
+
+    btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+            sliderNav(i)
+        });
+    });
+  </script>
+  <script src="main.js" defer data-deferred="1"></script>
+  </body>
 </html>
