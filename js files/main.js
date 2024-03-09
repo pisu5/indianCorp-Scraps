@@ -1,6 +1,14 @@
 const menuBtn = document.querySelector(".menu-btn");
 const navigation = document.querySelector(".navigation");
 
+function scrollToContact() {
+  // Get the contact section
+  let contactSection = document.getElementById("conatctt");
+
+  // Scroll to the contact section
+  contactSection.scrollIntoView({ behavior: 'smooth' });
+}
+
 menuBtn.addEventListener("click", () => {
   menuBtn.classList.toggle("active");
   navigation.classList.toggle("active");

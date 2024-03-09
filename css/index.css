@@ -43,7 +43,7 @@ body {
   transition: 0.3s ease;
 }
 
-header .navigation .navigation-items a:before {
+.nav-area header .navigation .navigation-items a:before {
   content: "";
   position: absolute;
   background: #fff;
@@ -54,7 +54,7 @@ header .navigation .navigation-items a:before {
   transition: 0.3s ease;
 }
 
-header .navigation .navigation-items a:hover:before {
+.nav-area header .navigation .navigation-items a:hover:before {
   width: 100%;
   background: #09d42e;
 }
@@ -256,8 +256,8 @@ header .navigation .navigation-items a:hover:before {
     box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
   }
   .menu-btn {
-    background-color: rgb(225, 35, 35);
-    background: url(menu.png) no-repeat;
+    background-color: rgb(255, 255, 255);
+    background: url("../assest/left-alignment_7911410.png") no-repeat;
     background-size: 30px;
     background-position: center;
     width: 40px;
@@ -316,7 +316,7 @@ img {
   max-width: 100%;
   height: auto;
 }
-span,
+ span,
 a {
   display: inline-block;
   text-decoration: none;

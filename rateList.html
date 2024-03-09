@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrap Rates - KabadiWala</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            color: #fff;
+        }
+
+        header {
+            background-color: #4CAF50;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 0.5em;
+        }
+
+        nav ul {
+            
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin: 0 1em;
+        }
+
+        nav a {
+            color: #12a7cc;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #34db5b;
+        }
+
+        .logo {
+            max-width: 100px;
+            height: auto;
+        }
+
+        .menu-icon {
+            font-size: 24px;
+            cursor: pointer;
+            display: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #2C3E50;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav li {
+                text-align: center;
+                margin: 0;
+            }
+
+            .menu-icon {
+                color: #ECF0F1;
+                display: block;
+            }
+        }
+
+        .section-main {
+            padding: 2em;
+            background-color: #34db5e;
+        }
+
+        .section-main h2 {
+            margin-left: 35%;
+            color: #fff;
+        }
+
+        .section-main p {
+            margin-left: 15%;
+            margin-bottom: 1em;
+        }
+
+        .rates {
+            background-color: #2C3E50;
+            color: #ECF0F1;
+            padding: 2em;
+            text-align: center;
+        }
+
+        .rate-type {
+            margin-top: 2em;
+        }
+
+        .rate-type h3 {
+            color: #ECF0F1;
+        }
+
+        .rate-table {
+            width: 100%;
+            margin-top: 1em;
+            border-collapse: collapse;
+        }
+
+        .rate-table th,
+        .rate-table td {
+            padding: 0.8em;
+            border: 1px solid #ECF0F1;
+        }
+
+        .rate-table th {
+            background-color: #2980B9;;
+            color: #fff;
+        }
+
+        .city-section {
+            margin: 7px;
+            background-color: #2980B9;
+            padding: 2em;
+            text-align: center;
+        }
+
+        .city-dropdown {
+            display: inline-block;
+            position: relative;
+            margin-top: 1em;
+        }
+
+        .city-dropdown-btn {
+            padding: 0.5em 1em;
+            background-color: #ECF0F1;
+            color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .city-dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ECF0F1;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .city-dropdown-content a {
+            color: #333;
+            padding: 0.5em 1em;
+            text-decoration: none;
+            display: block;
+        }
+
+        .city-dropdown-content a:hover {
+            background-color: #3498DB;
+            color: #fff;
+        }
+
+        .city-dropdown:hover .city-dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <img src="./assest/logo-kw.png" alt="KabadiWala Logo" class="logo">
+        <div class="menu-icon">&#9776;</div>
+        <ul>
+            <li><a href="./Home">Home</a></li>
+            <li><a href="./Service">Service</a></li>
+            <li><a href="./About">About Us</a></li>
+            <li><a href="./porfolio">Portfolio</a></li>
+            <li><a href="./Gallery">Gallery</a></li>
+            <li><a href="./Sign Up">Sign Up</a></li>
+            <li><a href="./Login">Login</a></li>
+        </ul>
+    </nav>
+
+    <section class="section-main">
+        <h2>Welcome to KabadiWala</h2>
+        <p>KabadiWala is your go-to platform for recycling. We make it easy for you to sell your scrap and contribute to a greener environment.</p>
+    </section>
+
+    <section class="city-section">
+        <h2>Our Services in Cities</h2> <h2>currently avilable in M.P</h2>
+        <div class="city-dropdown">
+            <button class="city-dropdown-btn">Select City</button>
+            <div class="city-dropdown-content">
+                <a href="#">Bhopal</a>
+                <a href="#">Indore</a>
+                <a href="#">Jabalpur</a>
+                <a href="#">Gwalior</a>
+                <a href="#">Itarsi</a>
+                <a href="#">Narmadapuram</a>
+                <a href="#">Sagar</a>
+                <a href="#">Rewa</a>
+                <a href="#">Jabalpur</a>
+                <a href="#">Pitampur</a>
+                <a href="#">ujjain</a>
+                <a href="#">Dewas</a>
+                <a href="">Sehore</a>
+                <a href="">Satna</a>
+                <a href="">Bina</a>
+                <a href="">Katni</a>
+                <a href="">Betul</a>
+                <a href="">Abdullahganj</a>
+                <!-- Add more cities as needed -->
+            </div>
+        </div>
+    </section>
+
+
+    <section class="rates">
+        <h2>Scrap Rates</h2>
+
+        <div class="rate-type">
+            <h3>Metal Scrap Rates</h3>
+            <table class="rate-table">
+                <thead>
+                    <tr>
+                        <th>Scrap Type</th>
+                        <th>Rate per KG</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Iron</td>
+                        <td>₹12.50</td>
+                    </tr>
+                    <tr>
+                        <td>Aluminum</td>
+                        <td>₹10.00</td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="rate-type">
+            <h3>Paper and Cardboard Scrap Rates</h3>
+            <table class="rate-table">
+                <thead>
+                    <tr>
+                        <th>Scrap Type</th>
+                        <th>Rate per KG</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Newspaper</td>
+                        <td>$1.00</td>
+                    </tr>
+                    <tr>
+                        <td>Cardboard</td>
+                        <td>$1.50</td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </div>
+        <div class="rate-type">
+            <h3>Automotive and Cardboard Scrap Rates</h3>
+            <table class="rate-table">
+                <thead>
+                    <tr>
+                        <th>Scrap Type</th>
+                        <th>Rate per KG</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Vehicle Scraps</td>
+                        <td>Contact us</td>
+                    </tr>
+                    <tr>
+                        <td>Non-ferrous</td>
+                        <td>contact us</td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="rate-type">
+            <h3>Electronic Scrap Rates</h3>
+            <table class="rate-table">
+                <thead>
+                    <tr>
+                        <th>Scrap Type</th>
+                        <th>Rate per KG</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>copper wires</td>
+                        <td>₹25.00</td>
+                    </tr>
+                    <tr>
+                        <td>Gadgets</td>
+                        <td>₹20.50</td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="rate-type">
+            <h3>Plastic Scrap Rates</h3>
+            <table class="rate-table">
+                <thead>
+                    <tr>
+                        <th>Scrap Type</th>
+                        <th>Rate per KG</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HDPE</td>
+                        <td>₹15</td>
+                    </tr>
+                    <tr>
+                        <td>LDPE</td>
+                        <td>₹12</td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </div>
+
+
+        <!-- Add more sections for other types of scraps -->
+
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-logo">
+            <img
+              src="./assest/logo-kw.png"
+              height="100px"
+              width="100px"
+              alt="KabadiWala Logo"
+            />
+          </div>
+  
+          <div class="footer-info">
+            <p>Your Recycling Partner</p>
+            <p>123 Green Street, Eco City</p>
+            <p>Email: info@kabadiwala.com</p>
+            <p>Phone: +123 456 7890</p>
+          </div>
+  
+          <div class="footer-links">
+            <h2>Quick Links</h2>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Testimonals</a></li>
+            
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+  
+          <div class="footer-services">
+            <h2>Services</h2>
+            <ul>
+              <li>Scrap Collection</li>
+              <li>Paper Reading</li>
+              <li>Vehicle Reading</li>
+              <li>Disassembling</li>
+              <li>Society Tie-up</li>
+              <li>Junk Removal</li>
+            </ul>
+          </div>
+        </div>
+  
+        <!-- Third-party credits -->
+        <div class="third-party-credits">
+          <p>
+            Icons by:
+            <a
+              href="https://www.flaticon.com/free-icons/sales-team"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="sales team icons"
+              >flaticon</a
+            >,
+            <a target="_blank" href="https://icons8.com/icon/HX4heYPHBZNg/running"
+              >Fast
+            </a>
+            icon by <a target="_blank" href="https://icons8.com">Icons8</a>,
+            <a
+              href="https://www.freepik.com/free-vector/people-recycling-concept_7970451.htm#fromView=search&page=1&position=13&uuid=28d1c697-eeb1-4325-9210-daebe8536183"
+              >Image by freepik</a
+            >
+          </p>
+        </div>
+      </footer>
+
+    
+</body>
+
+</html>
