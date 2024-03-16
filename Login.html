@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Page</title>
+    <!-- Include Firebase SDKs in your HTML -->
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js"></script>
+
+    <script src="./js files/firebaseConfig.js"></script>
     <style>
       body {
         background-color: #45a049;
@@ -91,17 +96,18 @@
       <div class="login-box">
         <img src="./assest/logo-kw.png" alt="Logo" class="logo" />
         <div class="input-group">
-          <input type="text" placeholder="Username" />
+          <input id="lEmail" type="email" placeholder="email" />
         </div>
         <div class="input-group">
-          <input type="password" placeholder="Password" />
+          <input id="lPass" type="password" placeholder="Password" />
         </div>
-        <button class="login-button">Login</button>
-        <a href="#" class="signup-link">Don't have an account? Sign up</a>
+        <button id="loginBut" class="login-button">Login</button>
+        <a id="flink" class="signup-link" href="">forget password</a> <br><br>
+        <a href="./signup.html" class="signup-link">Don't have an account? Sign up</a>
       </div>
     </div>
     <!--firebase config-->
-    <script src="./js files/login.js"></script>
-    <script src="./js files/firebaseConfig.js"></script>
+    <script type="module" src="./js files/login.js"></script>
+   
   </body>
 </html>

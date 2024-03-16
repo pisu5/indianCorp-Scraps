@@ -102,3 +102,65 @@ setInterval(() => {
 
 // Call the showSlide function to display the initial slide
 showSlide(currentSlide);
+
+
+
+let data = [
+  {
+      img: 
+"https://media.geeksforgeeks.org/wp-content/uploads/20230816191453/gfglogo.png",
+      name: "Rahul",
+      role: "Web Developer",
+      msg: `GeeksforGeeks is an incredible 
+      platform that has helped me enhance 
+      my web development skills. The tutorials 
+      and articles provided here are a valuable 
+      resource for anyone in the field.`,
+  },
+  {
+      img: 
+"https://media.geeksforgeeks.org/wp-content/uploads/20230816191453/gfglogo.png",
+      name: "Priya",
+      role: "Data Scientist",
+      msg: `I'm grateful for GeeksforGeeks, 
+      which has been my go-to platform for
+      learning and staying updated with the latest 
+      developments in data science. The quality of 
+      content here is unmatched.`,
+  },
+  {
+      img: 
+"https://media.geeksforgeeks.org/wp-content/uploads/20230816191453/gfglogo.png",
+      name: "Amit",
+      role: "Machine Learning Engineer",
+      msg: `As a machine learning engineer, 
+      GeeksforGeeks has been instrumental in my career 
+      growth. The comprehensive tutorials and practical 
+      examples have been a game-changer for me.`,
+  },
+];
+let i = 0;
+let j = data.length;
+let testCont = document.getElementById("testimonial-cont");
+let prev = document.getElementById("prev");
+let next = document.getElementById("next");
+
+let disTestimonial = () => {
+  testCont.innerHTML = `
+      <p>${data[i].msg}</p>
+      <img src=${data[i].img}>
+      <h3>${data[i].name}</h3>
+      <h6>${data[i].role}</h6>
+    `;
+};
+prev.addEventListener("click", () => {
+  i = (j + i - 1) % j;
+  disTestimonial();
+});
+next.addEventListener("click", () => {
+  i = (j + i + 1) % j;
+  disTestimonial();
+});
+window.onload = () => {
+  disTestimonial();
+};

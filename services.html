@@ -1,11 +1,415 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, 
+				initial-scale=1.0"
+    />
     <title>Our Services</title>
-</head>
-<body>
-    
-</body>
+    <script
+      src="https://kit.fontawesome.com/f6fa475c26.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./css/index.css" />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url("./assest/logo-kw.png");
+        background-repeat: no-repeat;
+        background-size: contain; /* Changed to contain */
+        background-color: rgb(90, 90, 90);
+        background-blend-mode: multiply;
+        background-position: center;
+        color: #fff;
+      }
+      nav ul {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-right: 7px;
+      }
+
+      nav ul li {
+        margin: 20px;
+        position: relative;
+      }
+      nav ul li a {
+        color: #fff;
+      }
+      h1,
+      h3 {
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        position: relative;
+        max-width: max-content;
+        margin: 2rem auto 5rem auto;
+      }
+
+      h1::after {
+        content: "";
+        position: absolute;
+        width: 75%;
+        height: 5px;
+        background-color: lightgreen;
+        bottom: -2rem;
+        left: 25px;
+      }
+
+      .services-container i {
+        font-size: 3rem;
+        color: lightgreen;
+        padding: 1rem;
+        transition: all 0.3s linear;
+        transform: rotate(-45deg);
+      }
+
+      .services-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      .service-card {
+        cursor: pointer;
+        width: 300px;
+        margin: 20px;
+        padding: 2rem 20px 20px 20px;
+        text-align: center;
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .icon-container {
+        border: 2px solid lightgreen;
+        transition: 0.3s linear;
+        width: max-content;
+        margin: 0 auto;
+        transform: rotate(45deg);
+      }
+
+      .service-card:hover {
+        box-shadow: 0 0 30px 0 lightgreen;
+        transform: scale(1.1);
+      }
+
+      .service-card a {
+        color: lightgreen;
+        text-decoration: none;
+      }
+
+      @media (max-width: 768px) {
+        .service-card {
+          width: 100%;
+        }
+      }
+
+      /* Styles for the popup */
+      .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        width: 300px;
+      }
+
+      .popup h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .popup label {
+        display: block;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      .popup input[type="text"] {
+        width: calc(100% - 20px);
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+      }
+
+      .popup input[type="button"] {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #4caf50;
+        color: #fff;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .overlay {
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+      }
+
+      /* Styles for logo */
+      .logo {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 50px;
+        height: 50px;
+      }
+
+      /* Styles for success dialog */
+      .success-popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1001;
+        width: 300px;
+        text-align: center;
+      }
+      /* Close Button */
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      /* Add this CSS after your existing styles */
+      @media (hover: hover) {
+        /* Apply hover styles for devices that support hover */
+        .service-card:hover {
+          box-shadow: 0 0 30px 0 lightgreen;
+          transform: scale(1.1);
+        }
+      }
+
+      /* Apply active styles for devices that do not support hover */
+      .service-card:active {
+        box-shadow: 0 0 30px 0 lightgreen;
+        transform: scale(1.1);
+      }
+
+      .my-float {
+        margin-top: 16px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li>Call Us +91 7999798981</li>
+        <li><a href="./Login.html">Login</a></li>
+        <li><a href="./index.html">Home</a></li>
+      </ul>
+    </nav>
+    <h1>Our Services</h1>
+
+    <div class="services-container">
+      <div class="service-card" onclick="openPopup()">
+        <div class="icon-container">
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <h3>Scrap Metal Collection</h3>
+        <p>
+          With the idea of imparting programming knowledge, Mr. Sandeep Jain, an
+          IIT Roorkee alumnus started a dream, GeeksforGeeks. Whether
+          programming excites you or you feel stifled, how to ace data
+          structures and algorithms, GeeksforGeeks is a one-stop solution.
+        </p>
+        <a href="#" class="button">Contact Us</a>
+      </div>
+
+      <div class="service-card" onclick="openPopup()">
+        <div class="icon-container">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+        <h3>Junk car Removal</h3>
+        <p>
+          With the idea of imparting programming knowledge, Mr. Sandeep Jain, an
+          IIT Roorkee alumnus started a dream, GeeksforGeeks. Whether
+          programming excites you or you feel stifled, how to ace data
+          structures and algorithms, GeeksforGeeks is a one-stop solution.
+        </p>
+        <a href="#" class="button">Contact Us</a>
+      </div>
+
+      <div class="service-card" onclick="openPopup()">
+        <div class="icon-container">
+          <i class="fa-solid fa-toolbox"></i>
+        </div>
+        <h3>Papers Shredding</h3>
+        <p>
+          With the idea of imparting programming knowledge, Mr. Sandeep Jain, an
+          IIT Roorkee alumnus started a dream, GeeksforGeeks. Whether
+          programming excites you or you feel stifled, how to ace data
+          structures and algorithms, GeeksforGeeks is a one-stop solution.
+        </p>
+        <a href="#" class="button">Contact Us</a>
+      </div>
+
+      <div class="service-card" onclick="openPopup()">
+        <div class="icon-container">
+          <i class="fa-brands fa-android"></i>
+        </div>
+        <h3>Customized Scraps Services</h3>
+        <p>
+          With the idea of imparting programming knowledge, Mr. Sandeep Jain, an
+          IIT Roorkee alumnus started a dream, GeeksforGeeks. Whether
+          programming excites you or you feel stifled, how to ace data
+          structures and algorithms, GeeksforGeeks is a one-stop solution.
+        </p>
+        <a href="#" class="button">Contact Us</a>
+      </div>
+
+      <div class="service-card" onclick="openPopup()">
+        <div class="icon-container">
+          <i class="fa-solid fa-database"></i>
+        </div>
+        <h3>Irons Scraps Collection</h3>
+        <p>
+          With the idea of imparting programming knowledge, Mr. Sandeep Jain, an
+          IIT Roorkee alumnus started a dream, GeeksforGeeks. Whether
+          programming excites you or you feel stifled, how to ace data
+          structures and algorithms, GeeksforGeeks is a one-stop solution.
+        </p>
+        <a href="#" class="button">Contact Us</a>
+      </div>
+
+      <div class="service-card" onclick="openPopup()">
+        <div class="icon-container">
+          <i class="fa-solid fa-pen"></i>
+        </div>
+        <h3>Appliances Disposal and Collections</h3>
+        <p>
+          With the idea of imparting programming knowledge, Mr. Sandeep Jain, an
+          IIT Roorkee alumnus started a dream, GeeksforGeeks. Whether
+          programming excites you or you feel stifled, how to ace data
+          structures and algorithms, GeeksforGeeks is a one-stop solution.
+        </p>
+        <a href="#" class="button">Contact Us</a>
+      </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+      <h2>Enter Details</h2>
+      <form id="inputForm">
+        <label for="mobile">Mobile:</label>
+        <input type="text" id="mobile" name="mobile" />
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" />
+        <label for="scrapsType">Scraps Type:</label>
+        <input type="text" id="scrapsType" name="scrapsType" />
+        <label for="quantity">Quantity:</label>
+        <input type="text" id="quantity" name="quantity" />
+
+        <button type="submit" onclick="submitForm()">Submit</button>
+        <button type="reset">Reset</button>
+      </form>
+    </div>
+
+    <div class="success-popup" id="successPopup">
+      <h2>Success!</h2>
+      <p style="color: chocolate">
+        Well contact within 30 minutes, or for faster processing, you may call
+        us directly and our team will reach out to you.
+      </p>
+    </div>
+
+    <a
+      href="https://api.whatsapp.com/send?phone=7999798981&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202."
+      class="float"
+      target="_blank"
+    >
+      <i class="fa-brands fa-whatsapp my-float"></i>
+    </a>
+
+    <!-- Additional Section with H3 Headings and Social Media Icons -->
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-logo">
+          <img
+            src="./assest/logo-kw.png"
+            height="100px"
+            width="100px"
+            alt="KabadiWala Logo"
+          />
+        </div>
+
+        <div class="footer-info">
+          <p>Your Recycling Partner</p>
+          <p>M.P Nagar Bhopal (M.P)</p>
+          <p>Email: info@kabadiwala.com</p>
+          <p>Phone: +91 7999798981</p>
+        </div>
+
+        <div class="footer-links">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./rateList.html">Rate List</a></li>
+            <li><a href="./aboutUs.html">About Us</a></li>
+            <li><a href="#">Testimonals</a></li>
+
+            <li><a href="#" onclick="scrollToContact()">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-services">
+          <h2>Services</h2>
+          <ul>
+            <li>Scrap Collection</li>
+            <li>Paper Reading</li>
+            <li>Vehicle Reading</li>
+            <li>Disassembling</li>
+            <li>Society Tie-up</li>
+            <li>Junk Removal</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="./js files/services.js"></script>
+  </body>
 </html>

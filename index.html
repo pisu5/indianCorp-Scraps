@@ -4,12 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kabadibala</title>
+    <head>
+      <script
+        src="https://kit.fontawesome.com/f6fa475c26.js"
+        crossorigin="anonymous"
+      ></script>
+    </head>
 
-   
     <link
-    rel="stylesheet"
-    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
-  />
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
 
     <link rel="stylesheet" href="./css/index.css" />
 
@@ -24,20 +29,15 @@
   <body>
     <div class="nav-area">
       <header>
-        <img
-          src="./assest/logo-kw.png"
-          height="60px"
-          width="60px"
-          alt="logo"
-          style="background-color: #09d41a"
-        />
+        <img src="./assest/logo-kw.png" height="60px" width="60px" alt="logo" />
         <div class="menu-btn">
+          <i class="fa-solid fa-bars" style="color: #ffffff"></i>
           <div class="navigation">
             <div class="navigation-items">
-              <a href="#">Home</a>
+              <a href="./index.html">Home</a>
               <a href="./rateList.html">Rate List</a>
-              <a href="#">About</a>
-              <a href="#">Services</a>
+              <a href="./aboutUs.html">About</a>
+              <a href="./services.html">Services</a>
               <a href="#">Testimonals</a>
               <a href="#" onclick="scrollToContact()">Contact</a>
             </div>
@@ -77,9 +77,7 @@
           <a href="#">Contact us</a>
         </div>
         <div class="content">
-          <h1>
-            Vehicles Scraps<br /><span></span>
-          </h1>
+          <h1>Vehicles Scraps<br /><span></span></h1>
           <p>
             By purchasing scrap materials, you are contributing to sustainable
             resource management and supporting the principles of the circular
@@ -233,23 +231,26 @@
       <div class="steps-container">
         <div class="step animate-fade-in">
           <!-- Replace the image tag with Font Awesome icon -->
-          <i class="fas fa-user-plus"></i> Signup
+          <i class="fas fa-user-plus"></i>
 
           <h3>Sign Up</h3>
           <p>Create an account on KabadiWala platform.</p>
         </div>
 
         <div class="step animate-fade-in">
+          <i class="fa-solid fa-truck-pickup"></i>
           <h3>Schedule Pickup</h3>
           <p>Browse services and schedule a pickup at your convenience.</p>
         </div>
 
         <div class="step animate-fade-in">
+          <i class="fa-solid fa-truck-ramp-box"></i>
           <h3>Collect Scrap</h3>
           <p>Our team will collect your scrap materials.</p>
         </div>
 
         <div class="step animate-fade-in">
+          <i class="fa-solid fa-hand-holding-dollar"></i>
           <h3>Get Paid</h3>
           <p>Receive payment for your recyclables.</p>
         </div>
@@ -278,13 +279,13 @@
       </div>
 
       <!-- Add your contact form here -->
-      <form id="conatctt">
+      <form action="./send_form.php" method="POST" id="conatctt">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required />
         <label for="Name">Mobile:</label>
-        <input type="number" id="mNumber" name="number" required>
+        <input type="number" id="mNumber" name="number" required />
         <label for="name">City:</label>
-        <input type="text" id="city" name="name" required />
+        <input type="text" id="city" name="city" required />
 
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required />
@@ -295,6 +296,7 @@
         <button type="submit">Submit</button>
       </form>
     </div>
+
     <!--FAQ section add-->
     <div class="FAQ">
       <h1>Frequently asked questions</h1>
@@ -341,7 +343,7 @@
     </section>
     <!--Whatsapp float button-->
     <a
-      href="https://api.whatsapp.com/send?phone=1234567890&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202."
+      href="https://api.whatsapp.com/send?phone=7999798981&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202."
       class="float"
       target="_blank"
     >
@@ -363,20 +365,20 @@
 
         <div class="footer-info">
           <p>Your Recycling Partner</p>
-          <p>123 Green Street, Eco City</p>
+          <p>M.P Nagar Bhopal Madhya Pradesh</p>
           <p>Email: info@kabadiwala.com</p>
-          <p>Phone: +123 456 7890</p>
+          <p>Phone: +91 7999798981</p>
         </div>
 
         <div class="footer-links">
           <h2>Quick Links</h2>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./services.html">Services</a></li>
             <li><a href="./rateList.html">Rate List</a></li>
-            <li><a href="#">About Us</a></li>
+            <li><a href="./aboutUs.html">About Us</a></li>
             <li><a href="#">Testimonals</a></li>
-            
+
             <li><a href="#" onclick="scrollToContact()">Contact</a></li>
           </ul>
         </div>

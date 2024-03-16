@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Popup with Input Fields</title>
+<style>
+  /* Styles for the popup */
+  .popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 300px;
+  }
+
+  .popup h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .popup label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .popup input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+  }
+
+  .popup input[type="button"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+
+  /* Styles for logo */
+  .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Styles for success dialog */
+  .success-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    width: 300px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<button onclick="openPopup()">Open Popup</button>
+
+<div class="overlay" id="overlay"></div>
+<div class="popup" id="popup">
+  <img class="logo" src="your-logo.png" alt="Logo">
+  <h2>Enter Details</h2>
+  <form id="inputForm">
+    <label for="mobile">Mobile:</label>
+    <input type="text" id="mobile" name="mobile">
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city">
+    <label for="scrapsType">Scraps Type:</label>
+    <input type="text" id="scrapsType" name="scrapsType">
+    <label for="quantity">Quantity:</label>
+    <input type="text" id="quantity" name="quantity">
+    <input type="button" value="Submit" onclick="submitForm()">
+  </form>
+</div>
+
+<div class="success-popup" id="successPopup">
+  <h2>Success!</h2>
+  <p>Well contact within 30 minutes, or for faster processing, you may call us directly and our team will reach out to you.</p>
+</div>
+
+<script>
+  function openPopup() {
+    document.getElementById("overlay").style.display = "block";
+    document.getElementById("popup").style.display = "block";
+  }
+
+  function submitForm() {
+    var mobile = document.getElementById("mobile").value;
+    var city = document.getElementById("city").value;
+    var scrapsType = document.getElementById("scrapsType").value;
+    var quantity = document.getElementById("quantity").value;
+    
+    console.log("Mobile:", mobile);
+    console.log("City:", city);
+    console.log("Scraps Type:", scrapsType);
+    console.log("Quantity:", quantity);
+    
+    closePopup();
+    showSuccessDialog();
+  }
+
+  function closePopup() {
+    document.getElementById("overlay").style.display = "none";
+    document.getElementById("popup").style.display = "none";
+  }
+
+  function showSuccessDialog() {
+    document.getElementById("successPopup").style.display = "block";
+  }
+</script>
+
+</body>
+</html>
